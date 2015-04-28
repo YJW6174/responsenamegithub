@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="ajax.js" > </script>
+	<script type="text/javascript"> 
+		window.onload=function(){
+			var oBtn=document.getElementById('btn1');
+			var oTxt=document.getElementById('text');
+			oBtn.onclick=function(){
+				
+				ajax('a.txt',function(str){
+					oTxt.innerHTML=str;})
+		}
+	}
+	</script>
+</head>
+<body>
+	<p>Hello World!</p>
+	<p>Is this world</p>
+	<a href="manage.html">管理页面</a>
+	<button id="btn1" >读取</button>
+	<div id="text"></div>
+</body>
+</html>
